@@ -42,7 +42,7 @@ function moveOutcomes() {
     squares[tail].classList.remove('snake')
     currentSnake.unshift(currentSnake[0] + direction)
 
-    if(squares[currentSnake[0]].classList.contains('apple')) {
+    if (squares[currentSnake[0]].classList.contains('apple')) {
         squares[currentSnake[0]].classList.remove('apple')
         squares[tail].classList.add('snake')
         currentSnake.push(tail)

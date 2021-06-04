@@ -1,9 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+:root {
+    --gunmetal: #2c3941ff;
+    --cadet: #5d7079ff;
+    --steel-teal: #6a8e95ff;
+    --green-sheen: #88b2acff;
+    --wintergreen-dream: #66907dff;
+    --deep-taupe: #865f5bff;
+    --khaki-web: #b1a990ff;
+    --platinum: #ecececff;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: var(--green-sheen);
+    color: var(--platinum);
+    overflow-x: hidden;
+}
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: var(--wintergreen-dream);
+    color: var(--platinum);
+    text-align: center;
+    border-bottom: 5px solid var(--steel-teal);
+}
+header h1 {
+    font-size: 3.4rem;
+}
+header h1:before {
+    content: ' ';
+    background-image: url('./img/snakeIcon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 30px;
+    height: auto;
+    margin-right: 15px;
+}
+header p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.code {
+  color: var(--wintergreen-dream);
+  transition: color 0.3s ease-out;
+}
+header p:hover .code {
+  color: var(--platinum);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px auto auto auto;
+    width: 200px;
+}
+main .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .stats button {
+    border-radius: 5px;
+    border: 1px solid var(--khaki-web);
+    margin: 10px auto;
+    padding: 3px 10px;
+    color: var(--gunmetal);
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Cascadia Code', monospace, sans-serif;
+    cursor: pointer;
+}
+main .stats .score {
+    font-size: 2.4rem;
+    text-align: center;
+}
+main .stats span {
+    font-size: 3.4rem;
+}
 .grid {
     width: 200px;
     height: 200px;
     display: flex;
     flex-wrap: wrap;
     border-style: solid;
+    border-radius: 10px;
+    background-color: var(--khaki-web);
 }
 
 .grid div {
@@ -12,8 +106,41 @@
 }
 
 .snake {
-    background-color: blue;
+    background-color: var(--wintergreen-dream);
+    border-radius: 50%;
 }
 .apple {
-    background-color: crimson;
+    background-color: var(--deep-taupe);
+    border-radius: 50%;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    color: var(--platinum);
+    background-color: var(--wintergreen-dream);
+    border-top: 5px solid var(--steel-teal);
+}
+footer p {
+    margin: 2rem auto;
+}
+footer i {
+    vertical-align: middle;
+    font-size: 2.4rem;
+}
+footer a {
+    color: var(--khaki-web);
+    text-decoration: none;
+}
+@media (max-width: 28.75em) {
+  footer {
+    padding: auto 30px;
+    flex-direction: column;
+    text-align: center;
+  }
 }
